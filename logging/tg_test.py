@@ -33,19 +33,19 @@ class C:
     @asynccontextmanager
     async def run(self) -> AsyncGenerator[asyncio.TaskGroup]:
         async with asyncio.TaskGroup() as tg:
-            tg.create_task(self.bg_task())
+            tg.create_task(self.bg_task(), name="bg task")
             yield tg
 
     async def do_something(self) -> None:
         await asyncio.sleep(1)
-        print("did something")
+        log.info("did something")
 
 
 async def main() -> None:
     c = C()
     async with c.run() as tg:
         # could use the TaskGroup
-        tg.create_task(c.do_something())
+        tg.create_task(c.do_something(), name="main task")
         # or not
         await c.do_something()
 

@@ -16,7 +16,7 @@ def fetch(size: int):
 
 def main():
     for _ in range(10):
-        fetch(1024 * 1024)
+        fetch(32 * 1024)
 
 
 if __name__ == "__main__":

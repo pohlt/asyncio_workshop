@@ -19,7 +19,7 @@ async def fetch(size: int):
 async def main():
     async with asyncio.TaskGroup() as tg:
         for _ in range(10):
-            tg.create_task(fetch(1024 * 1024))
+            tg.create_task(fetch(32 * 1024))
 
 
 if __name__ == "__main__":

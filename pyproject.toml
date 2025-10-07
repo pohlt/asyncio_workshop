@@ -1,0 +1,12 @@
+[project]
+name = "asyncio-workshop"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "loguru>=0.7.3",
+    "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
+    "quattro>=25.2.0",
+]

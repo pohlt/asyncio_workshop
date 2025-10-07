@@ -17,7 +17,7 @@ async def fetch(size: int):
 
 
 async def main():
-    tasks = [fetch(1024 * 1024) for _ in range(10)]
+    tasks = [fetch(32 * 1024) for _ in range(10)]
     await asyncio.gather(*tasks)
 
 

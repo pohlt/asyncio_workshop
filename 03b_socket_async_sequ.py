@@ -18,7 +18,7 @@ async def fetch(size: int):
 
 async def main():
     for _ in range(10):
-        await fetch(1024 * 1024)
+        await fetch(32 * 1024)
 
 
 if __name__ == "__main__":

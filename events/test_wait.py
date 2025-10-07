@@ -5,13 +5,13 @@ from hevent import EventOut, HEvent, run_while_not_event_set
 
 async def c_old(evt: HEvent):
     async def aux(v: float):
-        await asyncio.sleep(5)
+        await asyncio.sleep(3)
         return 42 * v
 
     try:
         v = await run_while_not_event_set(evt, aux(5))
         print(v)
-    except EventSet:
+    except EventOut:
         print("event set")
 
 
@@ -30,7 +30,7 @@ async def c(evt: HEvent):
 async def main():
     e = HEvent()
     c_task = asyncio.create_task(c(e.child))
-    await asyncio.sleep(2)
+    await asyncio.sleep(1)
     e.set()
     await c_task
 

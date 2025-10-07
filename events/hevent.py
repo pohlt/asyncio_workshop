@@ -37,7 +37,6 @@ class HEvent(asyncio.Event):
         t = tg.create_task(self.wait())
         t.add_done_callback()
 
-    @asynccontextmanager
     async def TaskGroup(self):
         tg = asyncio.TaskGroup()
 
@@ -46,8 +45,9 @@ class HEvent(asyncio.Event):
             async with tg:
                 yield tg
 
-        tg_task = asyncio.create_task(aux())
-        event_task = asyncio.create_task(self.wait())
+        # tg_task = asyncio.create_task(aux())
+        # event_task = asyncio.create_task(self.wait())
+        return aux()
 
 
 class EventOut(Exception): ...

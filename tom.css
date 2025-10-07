@@ -1,0 +1,42 @@
+:root {
+  --r-link-color: #88cdd8;
+  --r-main-font: "Fira Sans";
+  --r-main-font-size: 26px;
+  --r-heading-text-transform: none;
+  --r-heading1-size: 3.0em;
+  --r-heading2-size: 2.0em;
+  --r-heading3-size: 1.5em;
+  --r-heading-font: "Titillium Web";
+  --r-heading-font-weight: 300;
+  --r-heading-color: #88cdd8;
+  --r-heading-margin: 0 0 40px 0;
+  --r-code-font: "FiraCode Nerd Font Mono";
+}
+
+.reveal-viewport {
+  background-color: #222;
+  font-family: "Fira Sans";
+  xxxbackground-image: url("https://coherentminds.de/static/gfx/com_logo.svg");
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: bottom 20px right 20px;
+  xxx-data-background-opacity: 0.5;
+}
+
+
+.reveal img {
+  display: block;
+  border: none;
+  margin: 0;
+}
+
+div.columns {
+  display: grid;
+}
+
+div#customcontrols,
+div.slide-menu-button {
+  display: none;
+}
+
+/*# sourceMappingURL=tom.css.map */
